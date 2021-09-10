@@ -84,26 +84,37 @@ h1 {
 
 .left_section {
     display: flex;
+    justify-content: space-between;
+}
+
+.left_section{
+    background-color: gray;
 }
 
 .left_section > div {
-    justify-content: space-around;
     flex: 1;
 }
 
 .card > div {
     width: 200px;
     height: 500px;
+    margin: auto;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.card > div > img {
-    width: 100%;
-    height: 300px;
+.travel{
+    background-image: url("image/sinla_jeju.jpg");
     object-fit: cover;
-    border-radius: 10px 10px 0px 0px;
 }
+.food
+
+/*.card > div > img {*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    object-fit: cover;*/
+/*    border-radius: 10px 10px 0px 0px;*/
+/*}*/
 
 
 .amount {
