@@ -80,10 +80,11 @@
 
 .left_section > li {
     flex: 1;
+    margin-right: 20px;
 }
 
 .left_section > li:not(:last-child) {
-    margin-right: 20px;
+    /*margin-right: 20px;*/
 }
 
 .left_section .card > div {
