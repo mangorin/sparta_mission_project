@@ -1,2 +1,0 @@
-# sparta_mission_project
-sparta_mission_project_3team
