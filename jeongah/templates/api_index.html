@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- Webpage Title -->
+    <title>영화 | Korea, Hello Marvel!</title>
+
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- naver.api -->
+    <script src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=vv256amuz5"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            showReview(); //로딩되자마자 불림
+        });
+
+        function makeReview() {
+            let name = $('#name').val()
+            let movie = $('#movie').val()
+            let review = $('#review').val()
+
+            $.ajax({
+                type: "POST",
+                url: "/review",
+                data: {name_give: name, movie_give: movie, review_give: review},
+                success: function (response) {
+                    alert(response["msg"]);
+                    window.location.reload();
+                }
+            })
+        }
+
+        function showReview() {
+            $.ajax({
+                type: "GET",
+                url: "/review",
+                data: {},
+                success: function (response) {
+                    let reviews = response['all_reviews']
+                    for (let i = 0; i < reviews.length; i++) {
+                        let name = reviews[i]['name']
+                        let movie = reviews[i]['movie']
+                        let review = reviews[i]['review']
+
+                        let temp_html = `<tr>
+                                                <td>${name}</td>
+                                                <td>${movie}</td>
+                                                <td>${review}</td>
+                                            </tr>`
+                        $('#reviews-box').append(temp_html)
+                    }
+                }
+            })
+        }
+
+    </script>
+</head>
+
+<body>
+<div id="map" style="width:100%;height:400px;"></div>
+
+<script>
+    var map = new naver.maps.Map('map', {
+        center: new naver.maps.LatLng(37.555, 126.8920),
+        zoom: 17
+    });
+
+
+
+    <!-- 마커 -->
+    var marker = new naver.maps.Marker({
+        position: new naver.maps.LatLng(37.555073, 126.892030),
+        map: map
+    });
+
+    <!-- 네모박스 -->
+    var infowindow = new naver.maps.InfoWindow();
+
+    function onSuccessGeolocation(position) {
+        var location = new naver.maps.LatLng(position.coords.latitude,
+            position.coords.longitude);
+
+        map.setCenter(location); // 얻은 좌표를 지도의 중심으로 설정합니다.
+        map.setZoom(10); // 지도의 줌 레벨을 변경합니다.
+
+        infowindow.setContent('<div style="padding:20px;">' + 'geolocation.getCurrentPosition() 위치' + '</div>');
+
+        infowindow.open(map, location);
+        console.log('Coordinates: ' + location.toString());
+    }
+
+
+    function onErrorGeolocation() {
+        var center = map.getCenter();
+
+        infowindow.setContent('<div style="padding:20px;">' +
+            '<h5 style="margin-bottom:5px;color:#f00;">Geolocation failed!</h5>' + "latitude: " + center.lat() + "<br />longitude: " + center.lng() + '</div>');
+
+        infowindow.open(map, center);
+    }
+
+    $(window).on("load", function () {
+        if (navigator.geolocation) {
+            /**
+             * navigator.geolocation 은 Chrome 50 버젼 이후로 HTTP 환경에서 사용이 Deprecate 되어 HTTPS 환경에서만 사용 가능 합니다.
+             * http://localhost 에서는 사용이 가능하며, 테스트 목적으로, Chrome 의 바로가기를 만들어서 아래와 같이 설정하면 접속은 가능합니다.
+             * chrome.exe --unsafely-treat-insecure-origin-as-secure="http://example.com"
+             */
+            navigator.geolocation.getCurrentPosition(onSuccessGeolocation, onErrorGeolocation);
+        } else {
+            var center = map.getCenter();
+            infowindow.setContent('<div style="padding:20px;"><h5 style="margin-bottom:5px;color:#f00;">Geolocation not supported</h5></div>');
+            infowindow.open(map, center);
+        }
+    });
+</script>
+
+<div class="a">
+    <div>
+        <div class="mb-3">
+            <label class="form-label">id</label>
+            <input id="name" type="text" placeholder="Jeongah">
+            <label class="form-label" style="margin-left: 40px;">영화제목</label>
+            <input id="movie" type="text" list="영화종류" placeholder="--영화 선택--">
+            <datalist id="영화종류">
+                <option value="캡틴 아메리카: 퍼스트어벤져"></option>
+            </datalist>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">영화후기(감상평)</label>
+            <textarea id="review" class="form-control" rows="3"></textarea>
+        </div>
+        <button onclick="makeReview()" type="submit" class="btn btn-primary">등록</button>
+    </div>
+
+    <br><br><br>
+
+    <div>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">영화제목</th>
+                <th scope="col">후기(감상평)</th>
+            </tr>
+            </thead>
+
+            <tbody id="reviews-box">
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
