@@ -9,11 +9,26 @@
     color: black;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .contents {
     font-size: 20px;
     font-weight: lighter;
 }
-
 .intro_bg {
     background-image: url("image/main_welcome_bg.jpg");
     /*이미지 url 변경 필요*/
@@ -45,6 +60,9 @@
     justify-content: flex-end;
     line-height: 74px;
     width: calc(1440px - 300px);
+
+
+
 }
 
 .navi > li {
