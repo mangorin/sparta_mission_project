@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
@@ -29,10 +29,10 @@
         <div class="home_box">
             <li><a herf="#">
                 <img class="home_link"
-                     src="../static/image/jeju.JFIF" width="100" height="40" border-radius="5"
+                     src="image/jeju.JFIF" width="100" height="40" border-radius="5"
                      alt="main_link">
             </a></li>
-            <!--            home 링크 삽입 필요-->
+            <!-- home 링크 삽입 필요-->
         </div>
         <ul class="navi">
             <li><a herf="#">Travel</a></li>
@@ -40,8 +40,29 @@
             <li><a herf="#">Hotel</a></li>
             <li><a herf="#">Field trip</a></li>
         </ul>
+
     </div>
     <div class="intro_bg">
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="image/main_welcome_bg2.jpg" class="d-block w-100" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img src="image/bg3.jpg" class="d-block w-100" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img src="image/bg4.jpg" class="d-block w-100" alt="">
+                </div>
+                <a href="#demo" class="carousel-control-prev" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a href="#demo" class="carousel-control-next" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+
+            </div>
+        </div>
     </div>
     <!-- intro end-->
 
