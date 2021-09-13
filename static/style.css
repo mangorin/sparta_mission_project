@@ -9,19 +9,28 @@
     color: black;
 }
 
+.warp{
+    width: 100%;
+}
+
 .contents {
     font-size: 20px;
     font-weight: lighter;
 }
 
+
+
+
 .intro_bg {
-    background-image: url("image/main_welcome_bg.jpg");
+    background-image: url("../static/image/main_welcome_bg.jpg");
     /*이미지 url 변경 필요*/
-    object-fit: cover;
     margin: auto;
     width: 1440px;
     height: 400px;
     border-radius: 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .header {
@@ -80,11 +89,10 @@
 
 .left_section > li {
     flex: 1;
-    margin-right: 20px;
 }
 
 .left_section > li:not(:last-child) {
-    /*margin-right: 20px;*/
+    margin-right: 20px;
 }
 
 .left_section .card > div {
@@ -109,13 +117,13 @@
 }
 
 .left_section .card .travel {
-    background-image: url("image/jeju_travel.jpg");
+    background-image: url("../static/image/jeju_travel.jpg");
 }
 .left_section .card .food {
-    background-image: url("image/buger.jpg");
+    background-image: url("../static/image/buger.jpg");
 }
 .left_section .card .hotel {
-    background-image: url("image/jeju_hotel.jpg");
+    background-image: url("../static/image/jeju_hotel.jpg");
 }
 /*left css end*/
 
