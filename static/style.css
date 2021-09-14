@@ -9,46 +9,27 @@
     color: black;
 }
 
-<<<<<<< HEAD:static/style.css
-.warp{
-    width: 100%;
-}
-
-
->>>>>>> 30cfcd4a9bb95c779697c9ce87cf21412f3d1243:templates/style.css
-
 .contents {
     font-size: 20px;
     font-weight: lighter;
 }
-<<<<<<< HEAD:static/style.css
 
-
-
-
-=======
->>>>>>> 30cfcd4a9bb95c779697c9ce87cf21412f3d1243:templates/style.css
-.intro_bg {
-    background-image: url("../static/image/main_welcome_bg.jpg");
-    /*이미지 url 변경 필요*/
+.warp{
+    position: relative;
     margin: auto;
     width: 1440px;
-    height: 400px;
-    border-radius: 5px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 }
 
 .header {
+    position: relative;
     display: flex;
-    width: 1440px;
+    width: 100%;
     margin: auto auto 5px auto;
     height: 50px;
     border-bottom: 1px solid gray;
 }
-
-.home_box {
+.header .home_box {
+    position: relative;
     width: 100px;
     height: 40px;
     margin-top: 10px;
@@ -56,22 +37,39 @@
     border-radius: 5px;
 }
 
-.navi {
+.header .navi {
+    position: relative;
     display: flex;
     justify-content: flex-end;
     line-height: 74px;
     width: calc(1440px - 300px);
 
-
-
 }
 
-.navi > li {
+.header .navi > li {
     margin-left: 84px;
 }
 
-.navi > li > a {
+.header .navi > li > a {
     color: black;
+}
+/*header css end*/
+
+.main_page_box {
+    width: 100%;
+    height: 400px;
+    margin: auto;
+}
+
+.main_page_box .intro_bg {
+    background-image: url("../static/image/main_welcome_bg.jpg");
+    /*이미지 url 변경 필요*/
+    width: 100%;
+    height: 400px;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 /*intro css end*/
@@ -79,7 +77,7 @@
 .section {
     position: relative;
     top: 20px;
-    width: 1440px;
+    width: 100%;
     height: 500px;
     margin: auto;
     display: flex;
@@ -99,9 +97,6 @@
 
 .left_section > li {
     flex: 1;
-}
-
-.left_section > li:not(:last-child) {
     margin-right: 20px;
 }
 
@@ -137,27 +132,43 @@
 }
 /*left css end*/
 
-.event_section .title {
-    background-color: green;
+.right_section{
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    border-radius: 10px;
+}
+.right_section .title {
     font-size: 32px;
     padding-top: 20px;
     text-align: center;
     width: 720px;
     height: 50px;
+    border-bottom: 1px solid #d3d9df;
 }
 
-.event_section .event_list {
-    background-color: aqua;
+.right_section .event_list {
     width: 100%;
     height: 430px;
 }
 
-.event_section .event_list .event {
+.right_section .event_list .event_cards .event_card {
     background-color: gray;
+    position: absolute;
+    right: 0px;
     width: 300px;
-    height: 130px;
-    object-fit: cover;
+    border: 3px solid #73AD21;
+    padding: 10px;
+    /*width: 300px;*/
+    /*height: 130px;*/
+    /*margin: 5px    auto    5px    auto ;*/
+    /*object-fit: cover;*/
+    /*list-style: none;*/
 }
+/*.right_section .event_list .event_cards .event_card >li {*/
+/*    float: right;*/
+/*}*/
+
 
 /*section css end*/
 
