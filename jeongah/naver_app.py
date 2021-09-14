@@ -8,7 +8,12 @@ db = client.dbsparta3
 ## HTML을 주는 부분
 @app.route('/')
 def home():
-    return render_template('api_index.html')
+    return render_template('api_naver.html')
+
+## HTML을 주는 부분
+@app.route('/')
+def home():
+    return render_template('api_kakao.html')
 
 ## API 역할을 하는 부분
 @app.route('/review', methods=['POST'])
