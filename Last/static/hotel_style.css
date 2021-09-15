@@ -1,0 +1,82 @@
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+.contents {
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.header {
+    display: flex;
+    width: 1440px;
+    margin: auto auto 5px auto;
+    height: 50px;
+    border-bottom: 1px solid gray;
+}
+
+.home_box {
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.navi {
+    display: flex;
+    justify-content: flex-end;
+    line-height: 74px;
+    width: calc(1440px - 300px);
+}
+
+.navi > li {
+    margin-left: 84px;
+}
+
+.navi > li > a {
+    color: black;
+}
+
+
+/*intro css end*/
+
+
+/*.container{*/
+/*    margin: auto;*/
+/*    padding: 0;*/
+/*}*/
+
+.food-cards{
+    margin-left: 3%;
+    display: flex;
+    /*width:17rem;*/
+    width: 46%;
+    border-radius: 10px;
+}
+.map_box{
+    float: right;
+    border-radius: 10px;
+    width: 46%;
+    /*height: 700px;*/
+    margin-right: 3%;
+    border: 1px solid gray;
+    background-color: green;
+}
+.card-review{
+    float: left;
+    background-color: red;
+    margin-top: 20px;
+    margin-left: 3%;
+    /*margin-right: auto;*/
+    border: 1px solid gray;
+    width: 46%;
+    height: 236px;
+    border-radius: 10px;
+}
