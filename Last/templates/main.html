@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-<header id="header" class="clearfix">
+<head class="clearfix">
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -15,57 +15,124 @@
             crossorigin="anonymous"></script>
     <title>코쟁이 제주 관광정보</title>
 
+    <!-- 구글폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="static/main_style.css">
 
-    <h1 class="logo"><a href="#">
-        <img src="https://www.jeju.go.kr/files/editor/eeffd663-d0a5-4b90-b3e2-05189da61ce7.jpg" width="70%">
-    </a></h1>
-    <nav class="nav">
-        <ul>
-            <li><a href="travel">Travel</a></li>
-            <li><a href="hotel">Hotel</a></li>
-            <li><a href="food">Food</a></li>
-        </ul>
-    </nav>
 
-</header>
+</head>
 
-<section id="main">
 
-    <img src="static/main_image/main_welcome_bg2.jpg" width="1500" height="350">
-
-</section>
 <body>
 
-<div class="space">
-    &nbsp;
+<div class="wrap">
+    <div class="header">
+        <div class="home_box">
+            <img style=" cursor: pointer;" onclick="location.href='main'" class="home_link"
+                     src="static/main_image/logo.jpg" width="100" height="39" border-radius="5"
+                     alt="logo_img">
+            <!-- home 링크 삽입 필요-->
+        </div>
+        <navi>
+            <li ><a href="travel">Travel</a></li>
+            <li ><a href="food">Food</a></li>
+            <li ><a href="hotel">Hotel</a></li>
+        </navi>
+
+    </div>
+    <div class="main_page_box">
+        <div class="intro_bg">
+            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="image/main_welcome_bg2.jpg" class="d-block w-100" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 
-<div class="travel_image">
-    <div class="card_font">
-        <span style="font-size: 100%">Travel</span>
-        <span class="travel_down" style="font-size: 65%"><br>여행</span>
+<div class="section">
+    <ul class="left_section">
+        <li style=" cursor: pointer;" onclick="location.href='travel'" class="card">
+            <div class="travel">
+                <div class="card-body">
+                    <h1 class="card-title">Travel</h1>
+                    <h3 class="card-title">여행</h3>
+                </div>
+            </div>
+        </li>
+        <li style=" cursor: pointer;" onclick="location.href='hotel'" class="card">
+            <div class="hotel">
+                <div class="card-body">
+                    <h1 class="card-title">Hotel</h1>
+                    <h3 class="card-title">숙박</h3>
+                </div>
+            </div>
+        </li>
+        <li style=" cursor: pointer;" onclick="location.href='food'" class="card">
+            <div class="food">
+                <div class="card-body">
+                    <h1 class="card-title">Food</h1>
+                    <h3 class="card-title">맛집</h3>
+                </div>
+            </div>
+        </li>
+
+
+    </ul>
+    <div class="right_section">
+        <div class="title">
+            행사 & 축제
+        </div>
+        <div class="event_list">
+            <ul class="event_cards">
+                <li class="event_card">
+                    <img class=""
+                         src=""
+                         alt="">
+                    <div class="card-body">
+                        <a target="_blank" href="#" class="card-title">여기 기사 제목이 들어가죠</a>
+                        <p class="card-text">기사의 요약 내용이 들어갑니다. 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리
+                            화려강산...</p>
+                        <p class="card-text comment">여기에 코멘트가 들어갑니다.</p>
+                    </div>
+                </li>
+                <li class="event_card">
+                    <img class=""
+                         src=""
+                         alt="">
+                    <div class="card-body">
+                        <a target="_blank" href="#" class="card-title">여기 기사 제목이 들어가죠</a>
+                        <p class="card-text">기사의 요약 내용이 들어갑니다. 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리
+                            화려강산...</p>
+                        <p class="card-text comment">여기에 코멘트가 들어갑니다.</p>
+                    </div>
+                </li>
+                <li class="event_card">
+                    <img class=""
+                         src=""
+                         alt="">
+                    <div class="card-body">
+                        <a target="_blank" href="#" class="card-title">여기 기사 제목이 들어가죠</a>
+                        <p class="card-text">기사의 요약 내용이 들어갑니다. 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리
+                            화려강산...</p>
+                        <p class="card-text comment">여기에 코멘트가 들어갑니다.</p>
+                    </div>
+                </li>
+
+
+            </ul>
+        </div>
     </div>
 </div>
-
-<div class="hotel_image">
-    <div class="card_font">
-        <span style="font-size: 100%">Hotel</span>
-        <span class="travel_down" style="font-size: 65%"><br>숙박</span>
-    </div>
-</div>
-
-<div class="food_image">
-    <div class="card_font">
-        <span style="font-size: 100%">Food</span>
-        <span class="travel_down" style="font-size: 65%"><br>음식</span>
-    </div>
-</div>
-
-<div class="festival">
-    <div style="font-size: 200%">행사&축제</div>
-</div>
+<!-- section end-->
 
 </body>
