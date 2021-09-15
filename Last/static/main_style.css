@@ -37,7 +37,6 @@
 }
 
 .header {
-    background-color: gray;
     position: relative;
     display: flex;
     width: 100%;
@@ -148,7 +147,7 @@
 }
 
 .left_section .card .travel {
-    background-image: url("../static/main_image/jeju_travel.jpg");
+    background-image: url("../static/main_image/maxresdefault.jpg");
 }
 .left_section .card .food {
     background-image: url("../static/main_image/buger.jpg");
@@ -163,7 +162,7 @@
     font-size: 32px;
     padding-top: 20px;
     text-align: center;
-    width: 720px;
+    /* width: 720px; */
     height: 50px;
     border-bottom: 1px solid #d3d9df;
 }
