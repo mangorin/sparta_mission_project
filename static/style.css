@@ -42,7 +42,6 @@
     justify-content: flex-end;
     line-height: 74px;
     width: calc(1440px - 300px);
-
 }
 
 .header .navi > li {
@@ -61,7 +60,7 @@
 }
 
 .main_page_box .intro_bg {
-    background-image: url("../static/image/main_welcome_bg.jpg");
+    background-image: url("../static/main_image/main_welcome_bg2.jpg");
     /*이미지 url 변경 필요*/
     width: 100%;
     height: 400px;
