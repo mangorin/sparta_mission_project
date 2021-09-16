@@ -5,12 +5,15 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
 
-    <!--    Bootstrap CSS-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-          crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <title>코쟁이 제주 관광정보</title>
 
     <!-- 구글폰트 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,61 +21,86 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="static/hotel_style.css">
+    <link rel="stylesheet" type="text/css" href="static/food_style.css">
 
 </head>
 <body>
-<div class="warp">
+<div class="wrap">
     <div class="header">
         <div class="home_box">
             <img style=" cursor: pointer;" onclick="location.href='main'" class="home_link"
-                     src="static/main_image/logo.jpg" width="100" height="39" border-radius="5"
-                     alt="logo_img">
-            <!--            home 링크 삽입 필요-->
+                 src="static/main_image/logo.jpg" width="100" height="39" border-radius="5"
+                 alt="logo_img">
+            <!-- home 링크 삽입 필요-->
         </div>
-        <ul class="navi">
+        <navi>
             <li><a href="travel">Travel</a></li>
             <li><a href="food">Food</a></li>
             <li><a href="hotel">Hotel</a></li>
+        </navi>
+    </div>
+    <!--    header end-->
+    <div class="section">
+        <ul class="left_section">
+            <div class="left_cards">
+                <li style=" cursor: pointer;" onclick="location.href='travel'" class="card">
+                    <!--                    onclick event link api-->
+                    <div class="food_1">
+                        <article class="card_img">
+                            <!--                            <img class="cover" src="http://unsplash.it/800/600?image=180"/>-->
+                            <!--                            이미지 링크 연결-->
+                        </article>
+                        <ul class="card-body">
+                            <h1 class="card-title">Travel</h1>
+                            <!--                            Title 연결-->
+                            <h3 class="card-title">여행</h3>
+                            <!--                            내용 연결-->
+                        </ul>
+                    </div>
+                </li>
+                <li style=" cursor: pointer;" onclick="location.href='travel'" class="card">
+                    <!--                    onclick event link api-->
+                    <div class="food_1">
+                        <article class="card_img">
+                            <!--                            <img class="cover" src="http://unsplash.it/800/600?image=180"/>-->
+                            <!--                            이미지 링크 연결-->
+                        </article>
+                        <ul class="card-body">
+                            <h1 class="card-title">Travel</h1>
+                            <!--                            Title 연결-->
+                            <h3 class="card-title">여행</h3>
+                            <!--                            내용 연결-->
+                        </ul>
+                    </div>
+                </li>
+                <li style=" cursor: pointer;" onclick="location.href='travel'" class="card">
+                    <!--                    onclick event link api-->
+                    <div class="food_1">
+                        <article class="card_img">
+                            <!--                            <img class="cover" src="http://unsplash.it/800/600?image=180"/>-->
+                            <!--                            이미지 링크 연결-->
+                        </article>
+                        <ul class="card-body">
+                            <h1 class="card-title">Travel</h1>
+                            <!--                            Title 연결-->
+                            <h3 class="card-title">여행</h3>
+                            <!--                            내용 연결-->
+                        </ul>
+                    </div>
+                </li>
+
+            </div>
+            <div class="left_review">
+                <ul class="card-review">리뷰</ul>
+            </div>
+        </ul>
+        <ul class="right_section">
+            <div class="map_box">food map</div>
         </ul>
     </div>
+
 </div>
 <!--    상단 navi-->
-
-<div>
-    <div class="map_box">hotel map</div>
-        <div>
-            <div class="food-cards">
-            <div class="card">
-                <img class="card-img-top" src="static/main_image/buger.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="static/main_image/buger.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="static/main_image/buger.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-review">리뷰</div>
-    </div>
-
-
-</div>
 
 
 </body>

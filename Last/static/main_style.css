@@ -8,33 +8,13 @@
     color: black;
 }
 
-.warp{
+.wrap{
     position: relative;
     margin: auto;
-    width: 1440px;
+    width: 90%;
 }
 /*<-- !*page css *! -->*/
 
-* {
-    font-family: 'Noto Sans KR', sans-serif;
-    list-style: none;
-    text-decoration: none;
-    border-collapse: collapse;
-    margin: 0px;
-    padding: 0px;
-    color: black;
-}
-
-.contents {
-    font-size: 20px;
-    font-weight: lighter;
-}
-
-.warp{
-    position: relative;
-    margin: auto;
-    width: 1440px;
-}
 
 .header {
     position: relative;
@@ -53,9 +33,8 @@
     border-radius: 5px;
 }
 
-
-
 .header > navi {
+    font-weight: bold;
     position: relative;
     display: flex;
     justify-content: flex-end;
@@ -185,9 +164,4 @@
     /*object-fit: cover;*/
     /*list-style: none;*/
 }
-/*.right_section .event_list .event_cards .event_card >li {*/
-/*    float: right;*/
-/*}*/
 
-
-/*section css end*/
