@@ -1,4 +1,5 @@
 import pymongo
+from pymongo import MongoClient
 import requests
 from bs4 import BeautifulSoup
 import time
@@ -12,7 +13,8 @@ chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('headless')
 driver = webdriver.Chrome(chrome_driver_dir, chrome_options=chrome_options)
 
-client = pymongo.MongoClient('localhost', 27017)
+client = MongoClient('mongodb://test:test@54.180.143.57', 27017)
+#client = MongoClient('localhost', 27017)
 db = client.mapJEJU
 
 
@@ -67,11 +69,11 @@ def getMapInfo(region, page):
             "x": place["x"],
             "y": place["y"]
         }
-        db.HOTEL.insert_one(doc)
+        db.TRAVEL.insert_one(doc)
         print(doc)
 
 
 for i in range(1, 6):
-    getMapInfo("제주도숙소", i)
+    getMapInfo("제주관광지", i)
 
 driver.quit()

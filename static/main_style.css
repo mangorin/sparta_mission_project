@@ -164,7 +164,7 @@
 /*event_container*/
 .event_container {
     width: 50%;
-    float: left;
+    float: right;
     display: flex;
 }
 
@@ -175,6 +175,7 @@
     transition: 0.4s;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     margin: 10px 10px 10px 10px;
+    border-radius: 10px;
 }
 
 .event_container .card:hover {
@@ -191,6 +192,7 @@
 .event_container .card .event_img img {
     height: 110%;
     width: 100%;
+    border-radius: 10px 10px 0px 0px;
 }
 
 .card .top-text {
@@ -198,13 +200,13 @@
 }
 
 .card .top-text .name {
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 600;
     color: #202020;
 }
 
 .card .top-text p {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     color: gray;
     line-height: 25px;
