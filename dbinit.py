@@ -13,7 +13,7 @@ chrome_options.add_argument('headless')
 driver = webdriver.Chrome(chrome_driver_dir, chrome_options=chrome_options)
 
 client = pymongo.MongoClient('localhost', 27017)
-db = client.mapEx
+db = client.mapJEJU
 
 
 def getImg(url):
@@ -67,10 +67,11 @@ def getMapInfo(region, page):
             "x": place["x"],
             "y": place["y"]
         }
+        db.HOTEL.insert_one(doc)
         print(doc)
 
 
 for i in range(1, 6):
-    getMapInfo("제주카페", i)
+    getMapInfo("제주도숙소", i)
 
 driver.quit()

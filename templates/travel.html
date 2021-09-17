@@ -14,6 +14,12 @@
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
     <title>코쟁이 제주 관광정보</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+    <!-- services와 clusterer, drawing 라이브러리 불러오기 -->
+    <script type="text/javascript"
+            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=1b158fce8188c11ca6a573651b024734&libraries=services,clusterer,drawing"></script>
+
 
     <!-- 구글폰트 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +27,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="static/food_style.css">
+    <link rel="stylesheet" type="text/css" href="static/any_style.css">
+
+    <!-- JS -->
+    <script src="../static/js/travel_js.js"></script>
 
 </head>
 <body>
@@ -42,60 +51,19 @@
     <!--    header end-->
     <div class="section">
         <ul class="left_section">
-            <div class="left_cards">
-                <li style=" cursor: pointer;" onclick="location.href='travel'" class="card">
-                    <!--                    onclick event link api-->
-                    <div class="food_1">
-                        <article class="card_img">
-                            <!--                            <img class="cover" src="http://unsplash.it/800/600?image=180"/>-->
-                            <!--                            이미지 링크 연결-->
-                        </article>
-                        <ul class="card-body">
-                            <h1 class="card-title">Travel</h1>
-                            <!--                            Title 연결-->
-                            <h3 class="card-title">여행</h3>
-                            <!--                            내용 연결-->
-                        </ul>
-                    </div>
-                </li>
-                <li style=" cursor: pointer;" onclick="location.href='travel'" class="card">
-                    <!--                    onclick event link api-->
-                    <div class="food_1">
-                        <article class="card_img">
-                            <!--                            <img class="cover" src="http://unsplash.it/800/600?image=180"/>-->
-                            <!--                            이미지 링크 연결-->
-                        </article>
-                        <ul class="card-body">
-                            <h1 class="card-title">Travel</h1>
-                            <!--                            Title 연결-->
-                            <h3 class="card-title">여행</h3>
-                            <!--                            내용 연결-->
-                        </ul>
-                    </div>
-                </li>
-                <li style=" cursor: pointer;" onclick="location.href='travel'" class="card">
-                    <!--                    onclick event link api-->
-                    <div class="food_1">
-                        <article class="card_img">
-                            <!--                            <img class="cover" src="http://unsplash.it/800/600?image=180"/>-->
-                            <!--                            이미지 링크 연결-->
-                        </article>
-                        <ul class="card-body">
-                            <h1 class="card-title">Travel</h1>
-                            <!--                            Title 연결-->
-                            <h3 class="card-title">여행</h3>
-                            <!--                            내용 연결-->
-                        </ul>
-                    </div>
-                </li>
+            <div class="contents-body">
 
             </div>
-            <div class="left_review">
-                <ul class="card-review">리뷰</ul>
-            </div>
         </ul>
-        <ul class="right_section">
-            <div class="map_box">food map</div>
+
+
+        <div class="map_box">
+            <div class="map_container">
+                <div id="map">
+                </div>
+            </div>
+        </div>
+
         </ul>
     </div>
 
