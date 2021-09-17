@@ -5,6 +5,9 @@ let map, ps
 
 $(document).ready(function () {
 
+
+
+
     getFoodInfo()
 
     infowindow = new kakao.maps.InfoWindow({zIndex: 1});
@@ -28,7 +31,7 @@ $(document).ready(function () {
 
 // 키워드 검색 완료 시 호출되는 콜백함수 입니다
 function placesSearchCB(data, status, pagination) {
-    console.log(status)
+    // console.log(status)
     if (status === kakao.maps.services.Status.OK) {
 
         $(".contents-body").empty();
@@ -38,7 +41,7 @@ function placesSearchCB(data, status, pagination) {
         var bounds = new kakao.maps.LatLngBounds();
 
         for (var i = 0; i < data.length; i++) {
-            console.log(data[i])
+            // console.log(data[i])
 
             makeCard(data[i])
 
@@ -52,10 +55,22 @@ function placesSearchCB(data, status, pagination) {
     }
 }
 
+$(window).scroll(function () {
+    var scrollValue = $(document).scrollTop();
+    console.log(scrollValue);
+
+    if (scrollValue >=85){
+        // $('.map_box ').addClass('fixed')
+        $('.map_container ').addClass('fixed')
+    }else{
+        $('.map_container ').removeClass('fixed')
+    }
+});
+
 
 // 지도에 마커를 표시하는 함수
 function displayMarker(place) {
-    console.log(place)
+    // console.log(place)
     // 마커를 생성하고 지도에 표시합니다
     var marker = new kakao.maps.Marker({
         map: map,
@@ -78,7 +93,7 @@ function search() {
         alert("검색 내용을 입력하세요!")
         return
     }
-    console.log(sch)
+    // console.log(sch)
     ps.keywordSearch(sch, placesSearchCB);
 }
 
