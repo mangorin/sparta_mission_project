@@ -21,7 +21,7 @@ $(document).ready(function () {
     ps = new kakao.maps.services.Places();
 
     // 키워드로 장소를 검색합니다
-    ps.keywordSearch('제주 맛집', placesSearchCB);
+    // ps.keywordSearch('제주 맛집', placesSearchCB);
 
 })
 
@@ -38,6 +38,7 @@ function placesSearchCB(data, status, pagination) {
         var bounds = new kakao.maps.LatLngBounds();
 
         for (var i = 0; i < data.length; i++) {
+            console.log(data[i])
 
             makeCard(data[i])
 
@@ -108,7 +109,7 @@ function makeCard(data) {
 function getFoodInfo() {
     $.ajax({
         type: "GET",
-        url: "/Food",
+        url: "/getfood",
         success: function (response) {
             let data_food = response['data']
 
@@ -120,7 +121,7 @@ function getFoodInfo() {
 function getTravelInfo() {
     $.ajax({
         type: "GET",
-        url: "/Travel",
+        url: "/gettravel",
         success: function (response) {
             let data_travel = response['data']
 
@@ -133,7 +134,7 @@ function getTravelInfo() {
 function getHotelInfo() {
     $.ajax({
         type: "GET",
-        url: "/Hotel",
+        url: "/gethotel",
         success: function (response) {
             let data_hotel = response['data']
 

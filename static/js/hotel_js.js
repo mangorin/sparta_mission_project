@@ -21,7 +21,7 @@ $(document).ready(function () {
     ps = new kakao.maps.services.Places();
 
     // 키워드로 장소를 검색합니다
-    ps.keywordSearch('제주 맛집', placesSearchCB);
+    // ps.keywordSearch('제주 맛집', placesSearchCB);
 
 })
 
@@ -110,7 +110,7 @@ function makeCard(data) {
 function getHotelInfo() {
     $.ajax({
         type: "GET",
-        url: "/Hotel",
+        url: "/gethotel",
         success: function (response) {
             let data_hotel = response['data']
 

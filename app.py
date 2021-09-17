@@ -1,7 +1,8 @@
 from flask import Flask, render_template, jsonify, request
 from pymongo import MongoClient
 
-client = MongoClient('mongodb://test:test@localhost', 27017)
+# client = MongoClient('mongodb://test:test@localhost', 27017)
+client = MongoClient('mongodb://test:test@54.180.143.57', 27017)
 #client = MongoClient('localhost', 27017)
 db = client.mapJEJU
 
@@ -30,17 +31,17 @@ def food():
     return render_template('food.html')
 
 #DB불러오기
-@app.route('/Food', methods=['GET'])
+@app.route('/getfood', methods=['GET'])
 def Food():
     data_food = list(db.FOOD.find({ }, {'_id': False}))
     return jsonify({'msg': 'success', 'data': data_food})
 
-@app.route('/Hotel', methods=['GET'])
+@app.route('/gethotel', methods=['GET'])
 def Hotel():
     data_hotel = list(db.HOTEL.find({ }, {'_id': False}))
     return jsonify({'msg': 'success', 'data': data_hotel})
 
-@app.route('/Travel', methods=['GET'])
+@app.route('/gettravel', methods=['GET'])
 def Travel():
     data_travel = list(db.TRAVEL.find({ }, {'_id': False}))
     return jsonify({'msg': 'success', 'data': data_travel})
